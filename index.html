@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>myportfolio</title>
+<style>
+    .header-container {
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding: 1px 0px;
+        border-bottom: 1px solid silver;
+        border-radius:20px;
+        positioning:relative;
+    }
+    .logo {
+        display:flex;
+        align items:left;
+        margin-left:50px; 
+    }
+    .logo-circle {
+        width: 30px;
+        height: 30px;
+        background-color:blue;
+        color:white;
+        border-radius:50px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:20px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-weight:bold;
+        padding:-20px;
+    }
+    .logo-name {
+        margin-left:2px;
+        margin-top:6px;
+        font-size:20px;
+        font-weight:600;
+        justify-content:center;
+        color:hsl(0, 3%, 7%);
+    }
+    .nav-menu {
+        list-style:none;
+        display:flex;
+        gap:10px;
+        padding:10px;
+        margin-top:-50px;
+        margin-bottom:-35px;
+        margin-left:90px;
+    }
+    .nav-menu li a {
+        text-decoration: none;
+        color:#0c0c0c;
+        font-weight:bold;
+        border: 6px solid white;
+        transition:color 0.3s;
+    }
+    .nav-menu li a:hover {
+        color:007bff;
+    }
+    
+    #contacti {
+        background-color:blue;
+        color:white;
+        padding:1px;
+        align:center;
+    }
+    .about-container {
+        display: flex;
+        background-color: hwb(0 100% 0%);
+        padding: 2px 0px;
+        justify-content: center;
+    }
+
+    .intro {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 100px;
+        border: 1px solid rgb(165, 165, 153);
+        border-radius: 10px;
+        width: 100%;
+        max-width: 1000px;
+    }
+
+    .intro-text {
+        flex: 1;
+    }
+
+    .image1 {
+        margin-left: 20px;
+        align-items: flex-end;
+    }
+
+    .resize-image {
+        width: 120px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .i-icons {
+        list-style: none;
+        display: flex;
+        gap: 1px;
+        padding: 1px;
+        margin-top: 20px;
+        font-size: x-small;
+        flex-wrap: wrap;
+    }
+
+    .i-icons button {
+        padding: 0px;
+        font-size: 0.7rem;
+        border-radius: 8px;
+        background-color: #f8dddd;
+        border: 1px solid hsl(0, 0%, 100%);
+        width: 100px;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .i-icons h2 {
+        font-size: 1rem;
+        margin: 5px 0 0 0;
+    }
+
+    .i-icons h4 {
+        font-size: 0.6rem;
+        margin: 0;
+    }
+    .resize-image {
+        width:60%;
+        height:40;
+        border-radius:10px;
+        ;
+    }
+
+    <!--continuation of Intro block with image from left css-->
+    .body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: hsl(0, 0%, 94%);
+    }
+    .mprocon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20vh;
+        margin: 0;
+        background-color: #f0f0f0;
+    }
+    .pro-container {
+        display: flex;
+        background-color: hwb(0 100% 0%);
+        padding: 40px 0px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 40px;
+        border: 1px solid rgb(165, 165, 153);
+        border-radius: 10px;
+        width: 100%;
+        max-width: 400px;
+    }
+    .pro-text {
+        flex: 1;
+        margin-left:20px;
+    }
+    .image2 img {
+        width: 100px
+        height: auto;
+        border-radius: 10px;
+    }
+    .resize-image2 {
+        width: 100px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    <!--footer cascading-->
+    .footer {
+        display:flex;
+        flex-flow: row;
+        border-top: 1px solid rgb(172, 91, 33);
+        border-top-color:rgb(172, 91, 33);
+        border-radius: 10px;
+    }
+    .footernav-menu {
+        list-style-type: none;
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        width:50%;
+        margin: 0 auto;
+    }
+   
+</style>
+</head>
+<body>
+<!--Header Section-->
+    <header class="header-container">
+        <!--left: Logo-->
+        <div class="logo">
+            <div class="logo-circle">J</div>
+            <h3 class="logo-name">John</h3>
+        </div>
+    <!--Right: Navigation-->
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact" id="contacti">Contact</a></li>
+        </ul>
+    </header>
+   <!--Body Section-->
+
+    <!-- About Section -->
+    <div class="about-container">
+        <!-- Intro block with image to the top right -->
+        <div class="intro">
+            <!-- Left Side: Text -->
+            <div class="intro-text">
+                <h1>Hello, I am John Attah!</h1>
+                <p>I'm a frontend software developer.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem earum ab reiciendis mollitia aliquam, minus hic nesciunt provident totam officia, quibusdam exercitationem delectus ducimus harum itaque natus est, repellendus blanditiis?.</p>
+                <button type="button" style="background-color: blue; color:white;">Say Hello!</button>
+                <br>
+                <br>
+                <ul class="i-icons">
+                    <li>
+                        <button type="button">
+                            <h2>10 Y</h2>
+                            <h5>Experience</h5>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button">
+                            <h2>100+</h2>
+                            <h5>P. Completed</h5>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button">
+                            <h2>25</h2>
+                            <h5>Happy Clients</h5>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Right Side: Image -->
+            <div class="image1">
+                <img src="/images/profilepicfl.png" alt="Profile Picture" class="resize-image">
+            </div>
+        </div>
+    </div><br>
+    <!--continuation of Intro block with image from left -->
+    <div class="mprocon">    
+        <div class="pro-container">
+            <!-- Left Side: Text -->
+            <div class="image2">
+                <img src="/images/profilepicfr.png" alt="Profile Picture" class="resize-image2">
+            </div>
+            <!-- Right Side: Image -->
+            <div class="pro-text">
+                <h2>I am professional web developer, who specialise...</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem earum ab reiciendis mollitia aliquam, minus hic nesciunt provident totam officia, quibusdam exercitationem delectus ducimus harum itaque natus est, repellendus blanditiis?.</p>
+            </div>
+        </div>
+    </div><br>
+    <hr>
+    <hr>
+    <div>
+        <div>
+        <h2>Work Process</h2>
+        <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minus earum ducimus, tempora sapiente, dolorum, modi perferendis atque iste quia dolorem deserunt omnis aut doloremque.</h5>
+        </div>
+        <ul>
+            <button><h3>Research</h3><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6></button> <button><h3>Design</h3><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6></button><br>
+            <button><h3>Analyze</h3><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6></button> <button><h3>Lauch</h3><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6></button> 
+        </ul>
+    </div><br>
+    <hr>
+    <hr><br>
+    <div>
+        <div>
+        <h2>Portfolio</h2>
+        <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minus earum ducimus, tempora sapiente, dolorum, modi perferendis atque iste quia dolorem deserunt omnis aut doloremque.</h5>
+        </div>
+        <ul>
+            <button><h3>Research</h3><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6></button> <button><h3>Design</h3><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6></button><button><h3>Design</h3><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6></button><br>
+            <button><h3>Analyze</h3><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6></button> <button><h3>Lauch</h3><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6><button><h3>Design</h3><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6></button></button> 
+        </ul>
+    </div><br>
+    <hr>
+    <hr>
+        <div>
+        <h2>Do You have a Project Idea</h2>
+        <h5>Let discuss your project idea!</h5>
+        </div>
+    <hr>
+    <hr><br>
+    <div>
+        <div>
+        <h2>Blog</h2><br>
+        <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minus earum ducimus, tempora sapiente, dolorum, modi perferendis atque iste quia dolorem deserunt omnis aut doloremque.</h5>
+        </div>
+        <ul>
+            <button><h3>Research</h3><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6></button> <button><h3>Design</h3><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6></button><button><h3>Design</h3><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6></button><br>
+            <button><h3>Analyze</h3><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6></button> <button><h3>Lauch</h3><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6><button><h3>Design</h3><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6></button></button> 
+        </ul>
+    </div><br>
+    <div>
+        <div>
+        <h2>Services</h2>
+        <h5>What I do?</h5>
+        </div>
+        <ul>
+            <button><h3>Research</h3><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6></button><br>
+            <button><h3>Analyze</h3><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6></button><br> 
+            <button><h3>Lauch</h3><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6></button> 
+        </ul>
+    </div><br>
+    <hr>
+    <div>
+        <h2>Happy Clients</h2>
+        <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5><br>
+        <ul>
+            <button><h3>Research</h3><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6></button>
+            <button><h3>Analyze</h3><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6></button> 
+            <button><h3>Lauch</h3><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6></button> 
+            <button><h3>Lauch</h3><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6></button>
+            <button><h3>Lauch</h3><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6></button>
+        </ul>
+    </div>
+    <div>
+        <h2>Happy Clients</h2>
+        <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5><br>
+        <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, id nostrum obcaecati cupiditate pariatur neque consequatur commodi dicta recusandae accusamus architecto at? Libero commodi beatae quod voluptatum error aliquid blanditiis.</h4>
+        <h3>Managing Director, XYZ Company</h3>
+    </div><br>
+    <hr>
+    <footer class="footer">
+        <div class="logo">
+            <div class="logo-circle">J</div>
+            <h3 class="logo-name">John</h3>
+        </div>
+    <div>
+        <ul class="footernav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div>
+        Copyright @ 2025 Picto.     
+        </div>
+    </div>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
